@@ -127,7 +127,7 @@ def power_frac():
 def convergence():
     hs = np.array([0.2, 0.1, 0.05, 0.025, 0.0125, 0.00625])
     spec_sin = fn.get("sin")
-    err_sin = [abs(gl_point(spec_sin.f, 1.0, 1.0, h, 50) - np.cos(1.0)) for h in hs]
+    err_sin = [abs(gl_point(spec_sin.f, 1.0, 1.0, h, 500) - np.cos(1.0)) for h in hs]
     spec_x2 = fn.get("x2")
     ref = float(spec_x2.exact_frac(np.array([2.0]), 0.5)[0])
     err_x2 = [abs(gl_point_from_zero(spec_x2.f, 2.0, 0.5, h) - ref) for h in hs]
@@ -206,7 +206,7 @@ def atlas(h=0.01, N=500):
 
 def rounding_floor():
     hs = np.logspace(-1, -12, 30)
-    df = ex.rounding_floor("sin", 1, list(hs), x=1.0, N=2)
+    df = ex.rounding_floor("sin", 1, list(hs), x=1.0, N=500)
     fig, ax = plt.subplots(figsize=(7.5, 4.5))
     ax.loglog(df["h"], df["ошибка"], "o-", ms=4, label=r"ошибка $D^1 \sin x$, $x=1$")
     ax.loglog(hs, 0.42 * hs, "k--", lw=1, alpha=0.6, label=r"дискретизация $\sim h/2$")
@@ -219,7 +219,7 @@ def rounding_floor():
 
 def richardson():
     hs = np.array([0.2, 0.1, 0.05, 0.025, 0.0125, 0.00625])
-    df = ex.richardson_convergence("sin", 1, list(hs), x=1.0, N=2)
+    df = ex.richardson_convergence("sin", 1, list(hs), x=1.0, N=500)
     fig, ax = plt.subplots(figsize=(7.5, 4.5))
     ax.loglog(hs, df["ошибка (обычная)"], "o-", label=r"обычная схема, $O(h)$")
     ax.loglog(hs, df["ошибка (Ричардсон)"], "s-", label=r"Ричардсон, $O(h^2)$")
