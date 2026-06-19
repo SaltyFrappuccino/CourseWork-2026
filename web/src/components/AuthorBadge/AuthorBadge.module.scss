@@ -1,0 +1,35 @@
+.badge {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 20;
+  max-width: min(330px, calc(100vw - 36px));
+  padding: 7px 13px 8px;
+  border: 1px solid #d8e0e2;
+  border-left: 3px solid #087b7b;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 8px 26px rgba(28, 35, 48, 0.14);
+  color: #16252a;
+  font-size: 12px;
+  line-height: 1.35;
+
+  span {
+    margin-right: 6px;
+    color: #66757b;
+  }
+
+  strong {
+    font-weight: 760;
+  }
+}
+
+@media (max-width: 760px) {
+  .badge {
+    right: 12px;
+    left: 12px;
+    bottom: 12px;
+    max-width: none;
+    text-align: center;
+  }
+}

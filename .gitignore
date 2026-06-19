@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Виртуальные окружения
+venv/
+.venv/
+env/
+
+# LaTeX (промежуточные файлы сборки)
+*.aux
+*.log
+*.toc
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Логи локального dev-сервера web/
+dev-server*.log
+
+# Резервные копии
+*.bak
+
+# ОС и редакторы
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

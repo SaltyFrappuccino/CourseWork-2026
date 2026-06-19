@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 4px 0 26px;
+
+  h1 {
+    margin: 0;
+    color: #132126;
+    font-size: 30px;
+    font-weight: 750;
+    line-height: 1.15;
+    letter-spacing: 0;
+  }
+
+  p {
+    margin: 8px 0 0;
+    color: #5d6b72;
+    font-size: 15px;
+    line-height: 1.45;
+  }
+}
+
+@media (max-width: 760px) {
+  .header {
+    h1 {
+      font-size: 24px;
+    }
+  }
+}

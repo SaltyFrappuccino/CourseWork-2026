@@ -1,0 +1,32 @@
+.notes {
+  flex: 0 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 14px;
+  padding: 14px 22px;
+  border: 1px solid #d8e0e2;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 14px 34px rgba(30, 42, 47, 0.07);
+
+  h2 {
+    margin: 0 0 8px;
+    color: #16252a;
+    font-size: 16px;
+    font-weight: 760;
+  }
+
+  p {
+    margin: 0;
+    color: #5d6b72;
+    font-size: 13px;
+    line-height: 1.42;
+  }
+}
+
+@media (max-width: 1120px) {
+  .notes {
+    grid-template-columns: 1fr;
+  }
+}

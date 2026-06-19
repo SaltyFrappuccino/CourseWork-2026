@@ -1,0 +1,28 @@
+{
+  "name": "fractional-derivatives-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.node.json && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^5.0.0",
+    "plotly.js-basic-dist-min": "^3.6.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-plotly.js": "^3.0.0",
+    "typescript": "^5.8.3",
+    "vite": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/plotly.js": "^3.0.10",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@types/react-plotly.js": "^2.6.4",
+    "sass": "^1.101.0"
+  }
+}

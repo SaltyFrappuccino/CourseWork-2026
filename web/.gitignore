@@ -1,0 +1,14 @@
+# Зависимости
+node_modules/
+
+# Сборка
+dist/
+*.tsbuildinfo
+
+# Логи локального сервера
+dev-server*.log
+
+# ОС и редакторы
+.DS_Store
+.idea/
+.vscode/
